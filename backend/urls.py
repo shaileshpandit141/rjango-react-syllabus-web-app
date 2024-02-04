@@ -13,6 +13,7 @@ from django.conf.urls.static import static
 # Importing the IndexView from views.py file
 
 from .views import IndexView, testMessage
+from syllabus_services import urls
 
 
 # Define all URLs for backend project.
@@ -21,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
     path('api/test-message/', testMessage),
+    path('api/', include(urls))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root =  settings.MEDIA_ROOT)
