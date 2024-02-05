@@ -14,6 +14,6 @@ from .views import (
 
 urlpatterns = [
     path("syllabus/", syllabusView),
-    path("syllabus/<int:syllabus_id>/modules/", moduleView),
-    path("syllabus/modules/<int:module_id>/sub-modules/", subModuleView),
+    path("modules/<int:syllabus_id>/", moduleView),
+    path("sub-modules/<int:module_id>/", subModuleView),
 ]

@@ -34,3 +34,31 @@
     object-fit: contain;
     object-position: center;
 }
+
+
+.right--container {
+    width: fit-content;
+}
+
+
+.right--container .protect--overflow {
+    border-radius: 999rem;
+    border: 2px solid var(--secondary);
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.right--container .protect--overflow:hover {
+    background-color: var(--secondary);
+}
+
+
+.right--container .protect--overflow a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: var(--label);
+    letter-spacing: var(--label-spacing);
+    font-weight: 500;
+    padding: 8px 16px;
+}
