@@ -1,7 +1,6 @@
 .detail {
     grid-column: 2/3;
     width: 100%;
-    padding-block: 8px;
 }
 
 
@@ -10,13 +9,14 @@
     width: 100%;
     display: flex;
     align-items: center;
+    margin-block: 16px;
 }
 
 
 .return--btn--container .protect--overflow {
     width: fit-content;
     border-radius: 999rem;
-    background-color: var(--other);
+    background-color: var(--active);
     transition: background-color 0.3s ease-in-out;
 }
 

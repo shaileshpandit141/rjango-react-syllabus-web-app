@@ -28,6 +28,9 @@ html {
 }
 
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 
 /* || body  */

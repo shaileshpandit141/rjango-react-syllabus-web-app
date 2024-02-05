@@ -6,13 +6,6 @@
     transition: grid-template-columns 0.3s ease-in-out;
 }
 
-.header--layout {
-    background-color: var(--active);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
 
 @media (width < 481px) {
     .layout {
@@ -39,4 +32,12 @@
     .layout {
         grid-template-columns: 150px 1fr 150px;
     }
+}
+
+
+.header--layout {
+    background-color: var(--active);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }

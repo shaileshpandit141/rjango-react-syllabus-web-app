@@ -64,7 +64,7 @@ export default function Module(params) {
                 )}
             >
                 <h2 className='module--text--container'>
-                    <span>M{module.id}.</span>
+                    {/* <span>M{module.id}.</span> */}
                     <span>{module.name}</span>
                 </h2>
                 <div className='action--arrow--icon--container'>
