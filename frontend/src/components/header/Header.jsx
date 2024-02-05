@@ -15,7 +15,12 @@ export default function Header() {
             </section>
             <section className='right--container'>
                 <div className='protect--overflow'>
-                    <Link to={'http://localhost:8000/admin/'}>Admin</Link>
+                    <Link
+                        to={'http://localhost:8000/admin/'}
+                        target='_blank'
+                    >
+                        Admin
+                    </Link>
                 </div>
             </section>
         </header>
