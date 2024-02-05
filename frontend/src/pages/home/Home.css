@@ -1,0 +1,10 @@
+.home {
+    grid-column: 2/3;
+    background-color: transparent;
+    padding-block: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+

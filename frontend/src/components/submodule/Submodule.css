@@ -1,0 +1,16 @@
+.sub--module--text--container {
+    padding: 8px 16px;
+    margin-left: 16px;
+    font-size: var(--body-m);
+    letter-spacing: var(--body-m-spacing);
+    line-height: var(--body-m-height);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+
+.sub--module--text--container li::first-letter {
+    text-transform: capitalize;
+}

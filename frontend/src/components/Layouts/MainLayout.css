@@ -1,0 +1,42 @@
+.layout {
+    grid-column: 1/-1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+.header--layout {
+    background-color: var(--active);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+@media (width < 481px) {
+    .layout {
+        grid-template-columns: 30px 1fr 30px;
+    }
+}
+
+
+@media (481px <=width < 769px) {
+    .layout {
+        grid-template-columns: 50px 1fr 50px;
+    }
+}
+
+
+@media (769px <=width < 1024px) {
+    .layout {
+        grid-template-columns: 100px 1fr 100px;
+    }
+}
+
+
+@media (1024px <=width <1200px) {
+    .layout {
+        grid-template-columns: 150px 1fr 150px;
+    }
+}

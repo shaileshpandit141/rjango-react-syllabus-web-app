@@ -1,6 +1,9 @@
-export default async function requestToServer(url, method = 'GET', headers = {}, data = null) {
+export default async function requestToServer(relativeUrl, method = 'GET', headers = {}, data = null) {
+
+    const absoluteUrl = `http://localhost:8000/${relativeUrl}`
+
     try {
-        const response = await fetch(url, {
+        const response = await fetch(absoluteUrl, {
             method: method,
             headers: headers,
             body: data ? JSON.stringify(data) : null,

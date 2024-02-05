@@ -28,6 +28,8 @@ html {
 }
 
 
+
+
 /* || body  */
 body {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -46,13 +48,34 @@ body {
     width: 100%;
     height: fit-content;
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: 200px 1fr 200px;
     transition: grid-template-columns 0.3s ease-in-out;
 }
 
 
-@media (width < 769px) {
+@media (width < 481px) {
     #root {
-        grid-template-columns: 30px 1fr 30px;
+        grid-template-columns: 25px 1fr 25px;
+    }
+}
+
+
+@media (481px <=width < 769px) {
+    #root {
+        grid-template-columns: 50px 1fr 50px;
+    }
+}
+
+
+@media (769px <=width < 1024px) {
+    #root {
+        grid-template-columns: 100px 1fr 100px;
+    }
+}
+
+
+@media (1024px <=width <1200px) {
+    #root {
+        grid-template-columns: 150px 1fr 150px;
     }
 }

@@ -1,71 +1,50 @@
-/* || CSS Font Size Variables */
+/* CSS Font Size Variables */
 :root {
 
-  /* | For Display Text  */
+  /* For Display Text  */
   --display: 4rem;
   /* 64px */
   --display-height: 44px;
 
-  /* | For Heading Text  */
+  /* For Heading Text  */
   --heading: 2.813rem;
   /* 45px */
   --heading-height: 36px;
 
-  /* | For Title Text  */
+  /* For Title Text  */
   --title: 1.25rem;
   /* 20px */
   --title-height: 24px;
   --title-spacing: 0.15px;
 
-  /* | For Label Text  */
+  /* For Label Text  */
   --label: 1.125rem;
   /* 18px */
   --label-height: 16px;
   --label-spacing: 0.5px;
 
-  /* | For body Text  */
+  /* For body Text  */
   --body-m: 0.875rem;
   /* 14px */
   --body-m-height: 20px;
   --body-m-spacing: 0.25px;
 
-  /* || All Color variables */
-  --background-color: #f5f5dc;
-  --color-60: #ffffff;
-  --color-30: #21252b;
-  --color-10: #282c34;
+  /* All Color variables */
+  --primary: #fff;
+  --secondary: #282c34;
+  --other: #21252b;
+  --active: #191c20;
 
 }
 
-/* width */
-::-webkit-scrollbar {
-  display: none;
+
+body {
+  background-color: var(--secondary);
 }
+
 
 .protect--overflow {
   display: flex;
   overflow: hidden;
   width: fit-content;
-}
-
-
-/* || Test message styles */
-.test--message--cont {
-  grid-column: 2/3;
-  background-color: #9cbbbb59;
-  width: 100%;
-  height: fit-content;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.test--message--cont h1 {
-  text-transform: uppercase;
-  color: var(--color-10);
-  text-align: center;
-  font-size: var(--title);
-  letter-spacing: var(--title-spacing);
-  line-height: var(--title-height);
 }

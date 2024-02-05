@@ -4,49 +4,40 @@ import {
     RouterProvider,
     createBrowserRouter,
     createRoutesFromElements,
-    Route,
-    useLoaderData,
+    Route
 } from 'react-router-dom'
 
 
-// Importing user defined pages
+// Importing user defined pages.
 
-import MainLayout from './Components/Layouts/MainLayout';
-
-
-// Cheaching Django-React connection is ok or not
-
-import requestToServer from './requestToServer/requestToServer'
-async function loader() {
-    return await requestToServer('/api/test-message/')
-}
-
-function DjangoReactConactionTest() {
-    const requestData = useLoaderData()
-    return (
-        <div className='test--message--cont'>
-            <h1>{requestData.testMessage}</h1>
-        </div>
-    )
-}
+import MainLayout from './components/Layouts/MainLayout';
+import Home, { loader as HomeLoader } from './pages/home/Home';
+import Detail, { loader as DetailLoader } from './pages/detail/Detail';
 
 
-// All router configuration
+// All router configuration.
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<MainLayout />} >
-        <Route index element={<DjangoReactConactionTest />} loader={loader} />
+        <Route
+            index
+            element={<Home />}
+            loader={HomeLoader}
+        />
+        <Route
+            path='modules/:id/'
+            element={<Detail />}
+            loader={DetailLoader}
+        />
     </Route>
 ))
 
 
-// Main app function configuration
+// Main app function configuration.
 
 export default function App() {
     return (
-        <RouterProvider
-            router={router}
-        />
+        <RouterProvider router={router} />
 
     );
 }

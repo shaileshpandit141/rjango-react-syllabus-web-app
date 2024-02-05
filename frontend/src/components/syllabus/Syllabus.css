@@ -1,0 +1,126 @@
+.home .protect--overflow {
+    width: 100%;
+    border-radius: 16px;
+}
+
+
+.syllabus--card {
+    width: 100%;
+    background-color: var(--other);
+    padding: 16px;
+    text-decoration: none;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.syllabus--card * {
+    user-select: none;
+    color: var(--primary);
+}
+
+
+.syllabus--card:hover .view--label--container {
+    opacity: 1;
+}
+
+
+.syllabus--card:hover .arrow--icon {
+    transform: translateX(5px);
+}
+
+
+.syllabus--card--heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+
+.syllabus--logo--container {
+    aspect-ratio: 1/1;
+    height: 42px;
+    width: 42px;
+}
+
+
+.syllabus--logo--container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+.syllabus--name {
+    text-transform: capitalize;
+    font-size: var(--title);
+    letter-spacing: var(--title-spacing);
+    line-height: var(--title-height);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.syllabus--description {
+    width: 100%;
+    margin-block: 8px;
+    font-size: var(--body-m);
+    line-height: var(--body-m-height);
+    letter-spacing: var(--body-m-spacing);
+    opacity: .8;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.lower--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.date--time--container {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    font-size: var(--body-m);
+    line-height: var(--body-m-height);
+    letter-spacing: var(--body-m-spacing);
+    background-color: var(--active);
+    opacity: .8;
+    border-radius: 999rem;
+}
+
+
+.date--time--container span {
+    padding: 2px 8px;
+}
+
+
+.view--label--container {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    padding: 4px 8px;
+    font-size: var(--label);
+    letter-spacing: var(--label-spacing);
+    line-height: var(--label-height);
+    font-weight: 500;
+    opacity: .8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.arrow--icon {
+    transition: transform 0.3s ease-in-out;
+}
