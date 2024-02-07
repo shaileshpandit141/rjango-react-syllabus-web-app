@@ -16,8 +16,13 @@
 .return--btn--container .protect--overflow {
     width: fit-content;
     border-radius: 999rem;
-    background-color: var(--active);
+    background-color: var(--other);
     transition: background-color 0.3s ease-in-out;
+}
+
+
+.protect--overflow:hover {
+    background-color: var(--active);
 }
 
 

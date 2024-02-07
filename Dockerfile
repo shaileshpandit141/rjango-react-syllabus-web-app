@@ -3,7 +3,7 @@ FROM python
 
 
 # Setting the woring directory
-WORKDIR /translator
+WORKDIR /your_project
 
 
 # Copy project files

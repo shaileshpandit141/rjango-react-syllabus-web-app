@@ -13,17 +13,23 @@ import {
 import MainLayout from './components/Layouts/MainLayout';
 import Home, { loader as HomeLoader } from './pages/home/Home';
 import Detail, { loader as DetailLoader } from './pages/detail/Detail';
+import Error from './components/error/Error';
 
 
 // All router configuration.
 
 const router = createBrowserRouter(createRoutesFromElements(
-    <Route path='/' element={<MainLayout />} >
+    <Route
+        path='/'
+        element={<MainLayout />}
+        errorElement={<Error />}
+    >
         <Route
             index
             element={<Home />}
             loader={HomeLoader}
         />
+
         <Route
             path='modules/:id/'
             element={<Detail />}

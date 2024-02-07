@@ -1,31 +1,43 @@
 import React from 'react'
 import './Home.css'
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, defer, Await } from 'react-router-dom'
 import Syllabus from '../../components/syllabus/Syllabus'
 import requestToServer from '../../requestToServer/requestToServer'
 
 
 export async function loader() {
-    return await requestToServer('api/syllabus/')
+    const syllabusPromise = requestToServer('api/syllabus/')
+    return defer({ syllabusList: syllabusPromise })
+
 }
 
 
 export default function Home() {
 
-    const syllabusList = useLoaderData()
+    const syllabusPromise = useLoaderData()
 
-    const syllabusListElements = syllabusList.map(syllabus => {
+
+    function renderSyllabusElements(syllabusList) {
         return (
-            <Syllabus
-                key={syllabus.id}
-                syllabus={syllabus}
-            />
+            syllabusList?.map((syllabus => {
+                return (
+                    <Syllabus
+                        key={syllabus.id}
+                        syllabus={syllabus}
+                    />
+                )
+            }))
         )
-    })
+    }
+
 
     return (
         <div className='home'>
-            {syllabusListElements}
+            <React.Suspense fallback={<h2>Loading...</h2>}>
+                <Await resolve={syllabusPromise.syllabusList}>
+                    {renderSyllabusElements}
+                </Await>
+            </React.Suspense>
         </div>
     )
 }

@@ -1,0 +1,28 @@
+.error--container {
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 8px;
+}
+
+
+.error--container {
+    user-select: none;
+    color: var(--primary);
+}
+
+
+.error--container h1 {
+    font-size: var(--label);
+    line-height: var(--label-height);
+    letter-spacing: var(--label-spacing);
+    text-align: center;
+}
+
+.error--container p {
+    text-align: center;
+}

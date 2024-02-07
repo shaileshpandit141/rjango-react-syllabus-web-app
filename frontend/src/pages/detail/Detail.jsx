@@ -14,7 +14,7 @@ export default function Detail() {
 
     const moduleList = useLoaderData()
 
-    const moduleListElements = moduleList.map(module => {
+    const moduleListElements = moduleList?.map(module => {
         return (
             <Module
                 key={module.id}
