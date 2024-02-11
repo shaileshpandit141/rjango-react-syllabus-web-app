@@ -60,15 +60,15 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className='clear--filter--container'>
-                    {
-                        syllabusName && (
+                {
+                    syllabusName && (
+                        <div className='clear--filter--container'>
                             <div className="protect--overflow">
                                 <NavLink to="./">clear</NavLink>
                             </div>
-                        )
-                    }
-                </div>
+                        </div>
+                    )
+                }
             </div>
 
             <div className='home'>
