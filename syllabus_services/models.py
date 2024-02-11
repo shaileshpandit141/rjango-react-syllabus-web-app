@@ -9,6 +9,7 @@ class Syllabus(models.Model):
     description = models.TextField(db_column="syllabus_description", null=True)
     logo = models.ImageField(db_column="syllabus_logo",
                              upload_to='syllabus_logo', default=None)
+    filter_tag = models.CharField(db_column='filter_tag', max_length=50, null=True)
     dateTime = models.DateTimeField(
         db_column="created_date_time", auto_now=True)
 

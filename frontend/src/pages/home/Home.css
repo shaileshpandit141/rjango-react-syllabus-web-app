@@ -1,10 +1,97 @@
+.filter--container {
+    grid-column: 1/-1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    margin-block: .5rem;
+    gap: 8px 8px;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+
+@media (width < 481px) {
+    .filter--container {
+        grid-template-columns: 30px 1fr 30px;
+    }
+}
+
+
+@media (481px <=width < 769px) {
+    .filter--container {
+        grid-template-columns: 50px 1fr 50px;
+    }
+}
+
+
+@media (769px <=width < 1024px) {
+    .filter--container {
+        grid-template-columns: 100px 1fr 100px;
+    }
+}
+
+
+@media (1024px <=width <1200px) {
+    .filter--container {
+        grid-template-columns: 150px 1fr 150px;
+    }
+}
+
+
+.filter--container .filter--wrapper {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 8px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+
+.clear--filter--container {
+grid-column: 2/3;
+}
+
+
+.scroll--wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+
+.filter--container .protect--overflow {
+    width: fit-content;
+    background-color: var(--other);
+    border-radius: 999rem;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.filter--container .protect--overflow * {
+    color: var(--primary);
+}
+
+
+.filter--container .protect--overflow a {
+    font-size: var(--label);
+    letter-spacing: var(--label-spacing);
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+
+.filter--container .protect--overflow a::first-letter {
+    text-transform: capitalize;
+}
+
+
 .home {
     grid-column: 2/3;
     background-color: transparent;
-    padding-block: 8px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
     transition: grid-template-columns 0.3s ease-in-out;
 }
-
