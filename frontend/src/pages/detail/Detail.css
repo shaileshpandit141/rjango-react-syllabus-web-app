@@ -8,8 +8,10 @@
     user-select: none;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     margin-block: 16px;
+    row-gap: 16px;
 }
 
 
@@ -45,6 +47,28 @@
 .back--arrow {
     transform: rotate(180deg);
 }
+
+
+.syllabus--detail--info--container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--other);
+    border-radius: 16px;
+}
+
+
+.syllabus--detail--info--container .syllabus--name {
+    color: #d2d8ff;
+    font-size: var(--title);
+    letter-spacing: var(--title-spacing);
+    line-height: var(--title-height);
+    padding-block: 1rem;
+}
+
 
 .modules--container {
     flex: 1;

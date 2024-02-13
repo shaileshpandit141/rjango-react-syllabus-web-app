@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import { useLoaderData, defer, Await, useSearchParams, NavLink } from 'react-router-dom'
+import { useLoaderData, defer, Await, useSearchParams, Link } from 'react-router-dom'
 import Syllabus from '../../components/syllabus/Syllabus'
 import requestToServer from '../../requestToServer/requestToServer'
 
@@ -45,18 +45,18 @@ export default function Home() {
                 <div className='filter--wrapper'>
                     <div className="scroll--wrapper">
                         <div className="protect--overflow">
-                            <NavLink
+                            <Link
                                 to="./?syllabus-name=javascript"
                             >
                                 javascript
-                            </NavLink>
+                            </Link>
                         </div>
                         <div className="protect--overflow">
-                            <NavLink
+                            <Link
                                 to="./?syllabus-name=python"
                             >
                                 python
-                            </NavLink>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ export default function Home() {
                     syllabusName && (
                         <div className='clear--filter--container'>
                             <div className="protect--overflow">
-                                <NavLink to="./">clear</NavLink>
+                                <Link to="./">clear</Link>
                             </div>
                         </div>
                     )

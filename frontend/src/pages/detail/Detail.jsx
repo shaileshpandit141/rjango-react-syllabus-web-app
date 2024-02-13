@@ -1,6 +1,6 @@
 import React from 'react'
 import './Detail.css'
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData, useSearchParams } from 'react-router-dom'
 import Module from '../../components/module/Module'
 import requestToServer from '../../requestToServer/requestToServer'
 
@@ -13,6 +13,11 @@ export async function loader({ params }) {
 export default function Detail() {
 
     const moduleList = useLoaderData()
+
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const syllabusName = searchParams.get('syllabus-name')
+    const syllabusDescription = searchParams.get('syllabus-description')
 
     const moduleListElements = moduleList?.map(module => {
         return (
@@ -32,7 +37,9 @@ export default function Detail() {
                         <span>Return to all syllabus</span>
                     </Link>
                 </div>
-
+                <div className='syllabus--detail--info--container'>
+                    <h2 className='syllabus--name'>{syllabusName}</h2>
+                </div>
             </div>
             <div className='modules--container'>
 

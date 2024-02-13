@@ -9,7 +9,10 @@ export default function Syllabus(props) {
 
     return (
         <div className="protect--overflow">
-            <Link to={`modules/${syllabus.id}`} className='syllabus--card'>
+            <Link
+                to={`modules/${syllabus.id}/?syllabus-name=${syllabus.name}`}
+                className='syllabus--card'
+            >
                 <div className='syllabus--card--heading'>
                     <figure className="syllabus--logo--container">
                         <img src={`http://localhost:8000/${syllabus.logo}`} alt="" />

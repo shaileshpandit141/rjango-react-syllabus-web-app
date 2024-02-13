@@ -54,8 +54,7 @@
     object-position: center;
 }
 
-
-.syllabus--name {
+.syllabus--card--heading .syllabus--name {
     text-transform: capitalize;
     font-size: var(--title);
     letter-spacing: var(--title-spacing);
